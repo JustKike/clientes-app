@@ -1,0 +1,59 @@
+<div class="card seleccion p-3">
+    <h2>Alta cliente</h2>
+    <div class="form-floating was-validated mb-3">
+      <input
+        type="text"
+        id="floatingInput"
+        class="form-control is-invalid"
+        [(ngModel)]="cliente.nombre"
+        placeholder="Nombre" required
+      />
+      <label for="floatingInput">Nombre:</label>
+    </div>
+
+    <div class="form-floating was-validated mb-3">
+      <input
+        type="text"
+        id="floatingCif"
+        class="form-control is-invalid"
+        [(ngModel)]="cliente.cif"
+        placeholder="CIF" required
+      />
+      <label for="floatingCif">CIF:</label>
+    </div>
+
+    <div class="form-floating was-validated mb-3">
+      <input
+        type="text"
+        id="floatingAddress"
+        class="form-control is-invalid"
+        [(ngModel)]="cliente.direccion"
+        placeholder="Dirección" required
+      />
+      <label for="floatingAddress">Dirección:</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <select
+        class="form-select"
+        id="floatingSelect"
+        [(ngModel)]="cliente.grupo"
+        aria-label=".form-select-sm example"
+      >
+        <option *ngFor="let grupo of grupos" value="{{ grupo.id }}">
+          {{ grupo.nombre }}
+        </option>
+      </select>
+      <label for="floatingSelect">Grupo:</label>
+    </div>
+
+    <p>
+      <button
+        type="button"
+        class="btn btn-primary seleccion"
+        (click)="this.nuevoCliente()"
+      >
+        Guardar
+      </button>
+    </p>
+</div>

@@ -1,0 +1,17 @@
+<div class="card seleccion my-3 p-3">
+    <h2>
+        Listado clientes
+      </h2>
+      <div *ngIf="! clientes.length">No hay clientes por el momento</div>
+      <div>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action" *ngFor="let cliente of clientes; index as i">
+                <span>{{ i+1 }} -</span>
+                <span>{{cliente.nombre}} -</span>
+                <span>{{cliente.cif}} -</span>
+                <span>{{cliente.direccion}} -</span>
+                <span>{{cliente.grupo}}</span>
+            </li>
+        </ul>
+      </div>
+</div>

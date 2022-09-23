@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+.seleccion:not(.highlight-card):hover {
+    border-color:rgba(255, 255, 255, 0.668);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(9, 9, 9, 0.35);
+  }/* You can add global styles to this file, and also import other style files */
+  h2{
+    color: #810909;
+    text-shadow: -1px -1px 0 rgba(9, 9, 9, 0.35);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
